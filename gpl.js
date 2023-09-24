@@ -83,18 +83,25 @@ function drawChart() {
 }
 function getForm()
 {
-  strikePrice       = Number(document.getElementById('strike').value);  // 権利行使価格
-  futurePrice       = Number(document.getElementById('future').value);  // 先物価格
+  strikePrice       = Number(document.getElementById('strike').value);    // 権利行使価格
+  futurePrice       = Number(document.getElementById('future').value);    // 先物価格
+  const optionSq    = Number(document.getElementById('optionSQ').value);  // オプションSQ値
+  const settlement  = Number(document.getElementById('settlement').value);  // 先物決済価格
   const callSell    = document.getElementsByName('op_radio')[0].checked ? true : false;
   const futureSell  = document.getElementsByName('ft_radio')[0].checked ? true : false;
   const callPremium = Number(document.getElementById('call').value);  
   const putPremium  = Number(document.getElementById('put').value);
   const premium     = callSell ? callPremium - putPremium : -callPremium + putPremium;
-  ftSlope = futureSell  ? -1 : 1;                      // 先物傾き 1:買、-1:売
-  opSlope = callSell    ? -1 : 1;                      // 1:CBPS(Call=Buy,Put=Sel) -1:CSPB(Call=Sell, Put=Buy)
-  ftICept = ftSlope > 0 ? -futurePrice : futurePrice;  // 先物 y軸切片
-  opCept  = opSlope > 0 ? -strikePrice : strikePrice;  // オプション y軸切片
-  opCept += premium;
+  ftSlope  = futureSell  ? -1 : 1;                      // 先物傾き 1:買、-1:売
+  opSlope  = callSell    ? -1 : 1;                      // 1:CBPS(Call=Buy,Put=Sel) -1:CSPB(Call=Sell, Put=Buy)
+  ftICept  = ftSlope > 0 ? -futurePrice : futurePrice;  // 先物 y軸切片
+  opCept   = opSlope > 0 ? -strikePrice : strikePrice;  // オプション y軸切片
+  opCept  += premium;
+  const op = optionSq   * opSlope + opCept;
+  const ft = settlement * ftSlope + ftICept;
+  const pl = op + ft;
+  document.getElementById("profit").innerHTML = pl.toString(10);
+  return;
 }
 function recalc()
 {
