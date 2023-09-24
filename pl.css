@@ -1,0 +1,33 @@
+form{
+  background-color: #eaeaea;
+  padding:0px 0px;
+}
+
+form dl dt{
+  width: 105px;
+  padding:2px 0;
+  float:left;
+  clear:both;
+}
+
+form dl dd{
+  padding:2px 0;
+}
+
+input {
+  width:70px;
+}
+
+dl.a { margin: 0px 5px; }
+
+label.op_sel_buy, label.ft_sel_buy {
+  margin:0px 15px;
+}
+
+input.op_sel_buy, input.ft_sel_buy {
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  margin:0px 0px;
+  position: relative;
+}
