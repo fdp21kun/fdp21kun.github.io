@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./pl.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="./gpl.js"> </script>
+  </head>
+  <body>
+    <form>
+      <dl class="a">
+        <dt>権利行使価格</dt>
+        <dd><input id="strike" type="number" step="125" value="30000"></dd>
+        <dt>先物価格</dt>
+        <dd>
+          <input id="future" type="number" step="5" value="29000">
+          <label for="rd_future" class="ft_sel_buy">売</label>
+          <input id="rd_future" type="checkbox" name="ft_radio" class="ft_sel_buy">
+       </dd>
+        <dt>Call</dt>
+        <dd>
+          <input id="call" type="number" value="100">
+          <label for="rd_call" class="op_sel_buy">売</label>
+          <input id="rd_call" type="radio" name="op_radio" class="op_sel_buy" checked>
+        </dd>
+        <dt>Put</dt>
+        <dd>
+          <input id="put" type="number" value="100">
+          <label for="rd_put" class="op_sel_buy">売</label>
+          <input id="rd_put" type="radio" name="op_radio" class="op_sel_buy">
+        </dd>
+        <button id="reCalc" type="button" onclick="recalc()">再計算</button>
+      </dl>
+    </form>
+    <div id="linechart_material" style="width: 450px; height: 320px"></div>
+  </body>
+</html>
