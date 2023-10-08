@@ -7,43 +7,11 @@
     <script type="text/javascript" src="./gpl.js"> </script>
   </head>
   <body>
-    <form id="layout01">
-      <dl class="a">
-        <dt>権利行使価格</dt>
-        <dd><input id="strike" type="number" step="125" value="30000"></dd>
-        <dt>先物価格</dt>
-        <dd>
-          <input id="future" type="number" step="5" value="30000">
-          <label for="rd_future" class="ft_sel_buy">売</label>
-          <input id="rd_future" type="checkbox" name="ft_radio" class="ft_sel_buy">
-       </dd>
-        <dt>Call</dt>
-        <dd>
-          <input id="call" type="number" value="100">
-          <label for="rd_call" class="op_sel_buy">売</label>
-          <input id="rd_call" type="radio" name="op_radio" class="op_sel_buy" checked>
-        </dd>
-        <dt>Put</dt>
-        <dd>
-          <input id="put" type="number" value="100">
-          <label for="rd_put" class="op_sel_buy">売</label>
-          <input id="rd_put" type="radio" name="op_radio" class="op_sel_buy">
-        </dd>
-      </dl>
-    </form>
-
-    <form id="layout02">
-      <dl class="a">
-        <dt>SQ値</dt>
-        <dd><input id="optionSQ" type="number" step="1" value="30000"></dd>
-        <dt>先物決済価格</dt>
-        <dd><input id="settlement" type="number" step="1" value="30000"></dd>
-        <dt>最終損益</dt>
-        <dd> <label id="profit">0</label></dd>
-        <button id="reCalc" type="button" onclick="recalc()">再計算</button>
-      </dl>
-    </form>
-
-    <div id="linechart_material" style="width: 604px; height: 400px"></div>
-  </body>
+    <h2>チャート</h2>
+    <ul>
+      <li><a href="saya.html">鞘取り</a></li>
+      <li><a href="pl.html">損益</a></li>
+    </ul>
+    
+</body>
 </html>
