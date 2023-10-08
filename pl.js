@@ -53,11 +53,11 @@ function acquire() {
 }
 
 function sample( strike, cp, prem, buy){
-  const offset = buy < 0 ? prem : -prem;  // 売りならプレミアム分+
+  const offset = prem * (-buy);  // 売りならプレミアム分+
   let y;
   let s = [];
   for (let p = lower; p <= upper; p += 125) {
-    y = offset * buy;
+    y = offset;
     if (cp == "P") {                      // put
       if ( p <= strike) {
         y += (strike - p) * buy;
