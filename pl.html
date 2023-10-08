@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./pl.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="./pl.js"> </script>
+  </head>
+  <body>
+
+    <table class="float">
+      <tr>
+          <th><label class="box ttitle">権利行使価格</label></th>
+          <th><label class="box ttitle">C/P</label></th>
+          <th><label class="box ttitle">プレミアム</label></th>
+          <th><label class="box ttitle">数量</label></th>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike1" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle1" class="CallPutInput" type='checkbox' />
+              <label for="toggle1" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem1" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy1"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike2" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle2" class="CallPutInput" type='checkbox' />
+              <label for="toggle2" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem2" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy2"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike3" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle3" class="CallPutInput" type='checkbox' />
+              <label for="toggle3" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem3" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy3"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike4" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle4" class="CallPutInput" type='checkbox' />
+              <label for="toggle4" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem4" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy4"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike5" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle5" class="CallPutInput" type='checkbox' />
+              <label for="toggle5" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem5" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy5"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike6" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle6" class="CallPutInput" type='checkbox' />
+              <label for="toggle6" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem6" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy6"  type="number" step="1"   value="0"></td>
+      </tr>
+    </table>
+
+    <table class="float">
+      <tr>
+          <th><label class="box ttitle">権利行使価格</label></th>
+          <th><label class="box ttitle">C/P</label></th>
+          <th><label class="box ttitle">プレミアム</label></th>
+          <th><label class="box ttitle">数量</label></th>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike7" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle7" class="CallPutInput" type='checkbox' />
+              <label for="toggle7" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem7" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy7"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike8" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle8" class="CallPutInput" type='checkbox' />
+              <label for="toggle8" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem8" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy8"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike9" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle9" class="CallPutInput" type='checkbox' />
+              <label for="toggle9" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem9" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy9"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike10" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle10" class="CallPutInput" type='checkbox' />
+              <label for="toggle10" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem10" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy10"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike11" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle11" class="CallPutInput" type='checkbox' />
+              <label for="toggle11" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem11" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy11"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike12" type="number" step="125" value="30000"></td>
+        <td>
+            <div class="CallPutButton box">
+              <input id="toggle12" class="CallPutInput" type='checkbox' />
+              <label for="toggle12" class="CallPutLabel"/>
+            </div>
+        </td>
+        <td><input class="box i4dg" id="prem12" type="number" step="100" value="100"></td>
+        <td><input class="box i2dg" id="buy12"  type="number" step="1"   value="0"></td>
+      </tr>
+    </table>
+
+    <table class="float">
+      <tr>
+          <th><label class="box ttitle">先物価格</label></th>
+          <th><label class="box ttitle">m/μ</label></th>
+          <th><label class="box ttitle">数量</label></th>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike13" type="number" step="5" value="30000"></td>
+        <td>
+            <div class="MiniMicroButton box">
+              <input id="toggle13" class="MiniMicroInput" type='checkbox' />
+              <label for="toggle13" class="MiniMicroLabel"/>
+            </div>
+        </td>
+        <td><input class="box i2dg" id="buy13"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike14" type="number" step="5" value="30000"></td>
+        <td>
+            <div class="MiniMicroButton box">
+              <input id="toggle14" class="MiniMicroInput" type='checkbox' />
+              <label for="toggle14" class="MiniMicroLabel"/>
+            </div>
+        </td>
+        <td><input class="box i2dg" id="buy14"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike15" type="number" step="5" value="30000"></td>
+        <td>
+            <div class="MiniMicroButton box">
+              <input id="toggle15" class="MiniMicroInput" type='checkbox' />
+              <label for="toggle15" class="MiniMicroLabel"/>
+            </div>
+        </td>
+        <td><input class="box i2dg" id="buy15"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike16" type="number" step="5" value="30000"></td>
+        <td>
+            <div class="MiniMicroButton box">
+              <input id="toggle16" class="MiniMicroInput" type='checkbox' />
+              <label for="toggle16" class="MiniMicroLabel"/>
+            </div>
+        </td>
+        <td><input class="box i2dg" id="buy16"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike17" type="number" step="5" value="30000"></td>
+        <td>
+            <div class="MiniMicroButton box">
+              <input id="toggle17" class="MiniMicroInput" type='checkbox' />
+              <label for="toggle17" class="MiniMicroLabel"/>
+            </div>
+        </td>
+        <td><input class="box i2dg" id="buy17"  type="number" step="1"   value="0"></td>
+      </tr>
+
+      <tr>
+        <td><input class="box i5dg" id="strike18" type="number" step="5" value="30000"></td>
+        <td>
+            <div class="MiniMicroButton box">
+              <input id="toggle18" class="MiniMicroInput" type='checkbox' />
+              <label for="toggle18" class="MiniMicroLabel"/>
+            </div>
+        </td>
+        <td><input class="box i2dg" id="buy18"  type="number" step="1"   value="0"></td>
+      </tr>
+    </table>
+
+    <div id="linechart_material" class="float"></div>
+
+    <div style="margin: auto;">
+      <button id="reCalc" type="button" onclick="recalc()">再計算</button>
+      <BR>
+      <a href="index.html">戻る</a>
+    </div>
+
+  </body>
+</html>

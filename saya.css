@@ -1,0 +1,108 @@
+body {
+  background-color: lightgray;
+  margin: 4;
+  font-size: 14px;
+}
+ 
+#layout01, #layout02, #linechart_material {
+  background-color: #eaeaea;
+  width: 300px;   /* 幅 */
+  height: 150px;  /* 高さ */
+  float: left;    /* 回り込み */
+  border: solid 2px yellowgreen;
+}
+
+form{
+  background-color: #eaeaea;
+  padding:0px 0px;
+}
+
+form dl dt{
+  width: 105px;
+  padding:2px 5px;
+  float:left;
+  clear:both;
+}
+
+form dl dd{
+  padding:2px 0px;
+}
+
+input {
+  width:70px;
+}
+
+button {
+  width: 160px;
+  height: 50px;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 28px;
+  border-radius: 7px;
+  /* box-shadow: 2px 2px gray; */
+  background-color: PaleTurquoise;
+  border-bottom: 3px solid CadetBlue;
+}
+
+dl.a { margin: 0px 5px; }
+
+label.op_sel_buy, label.ft_sel_buy {
+  margin:0px 15px;
+}
+
+input.op_sel_buy, input.ft_sel_buy {
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  margin:0px 0px;
+  position: relative;
+}
+/* ----------------- call/put トグルボタン ---------------- */
+/* CSSコード */
+.CallPutInput {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.CallPutLabel {
+  width: 32px;
+  height: 18px;
+  background: darkviolet;
+  position: relative;
+  display: inline-block;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.CallPutLabel:after {
+  content: "Put";
+  position: absolute;
+  font-size: 14px;
+  left: 4px;
+  top: -2px;
+  z-index: 2;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.CallPutInput:checked + .CallPutLabel {
+  background-color: darkred;
+}
+
+.CallPutInput:checked + .CallPutLabel:after {
+  content: "Call";
+}
+
+.CallPutButton {
+  position: relative;
+  width: 85px;
+  height: 42px;
+  margin: auto;
+}
+/*--------------------------------------------------------*/

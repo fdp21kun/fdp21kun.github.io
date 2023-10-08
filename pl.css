@@ -1,59 +1,126 @@
-body {
-  background-color: gray;
-  margin: 4;
-  font-size: 14px;
-}
- 
-#layout01, #layout02, #linechart_material {
-  background-color: #eaeaea;
-  width: 300px;   /* 幅 */
-  height: 150px;  /* 高さ */
-  float: left;    /* 回り込み */
-  border: solid 2px yellowgreen;
-}
-
-form{
-  background-color: #eaeaea;
-  padding:0px 0px;
-}
-
-form dl dt{
-  width: 105px;
-  padding:2px 5px;
-  float:left;
-  clear:both;
-}
-
-form dl dd{
-  padding:2px 0px;
-}
 
 input {
   width:70px;
 }
-
-button {
-  width: 160px;
-  height: 50px;
-  margin: 20px;
-  font-weight: bold;
-  font-size: 28px;
-  border-radius: 7px;
-  /* box-shadow: 2px 2px gray; */
-  background-color: PaleTurquoise;
-  border-bottom: 3px solid CadetBlue;
+.float{
+  float: left;
+  /* border: 4px solid green; */
 }
-
-dl.a { margin: 0px 5px; }
-
-label.op_sel_buy, label.ft_sel_buy {
-  margin:0px 15px;
+table,th{
+  border-collapse: collapse;
+  border:1px solid #333;
+  background-color: lightblue;
+  }
+  table{
+    margin-left:3px;
+    margin-right:3px;
+  }
+/* ----------------- call/put トグルボタン ---------------- */
+.CallPutInput {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
 }
-
-input.op_sel_buy, input.ft_sel_buy {
-  width: 20px;
-  height: 20px;
-  top: 4px;
-  margin:0px 0px;
+.CallPutLabel {
+  width: 30px;
+  height: 21px;
+  background: darkviolet;
   position: relative;
+  display: inline-block;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+.CallPutLabel:after {
+  content: "Call";
+  position: absolute;
+  font-size: 12px;
+  left: 5px;
+  top: 2px;
+  z-index: 2;
+  color: #fff;
+  transition: 0.4s;
+}
+.CallPutInput:checked + .CallPutLabel {
+  background-color: darkred;
+}
+.CallPutInput:checked + .CallPutLabel:after {
+  content: "Put";
+}
+.CallPutButton {
+  position: relative;
+  width: 25px;
+  height: 15px;
+  top:-3px;
+  left:-1px;
+  margin: auto;
+}
+/* ----------------- mini/μ トグルボタン ---------------- */
+.MiniMicroInput {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+.MiniMicroLabel {
+  width: 30px;
+  height: 21px;
+  background: darkviolet;
+  position: relative;
+  display: inline-block;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+.MiniMicroLabel:after {
+  content: "μ";
+  position: absolute;
+  font-size: 12px;
+  left: 5px;
+  top: 2px;
+  z-index: 2;
+  color: #fff;
+  transition: 0.4s;
+}
+.MiniMicroInput:checked + .MiniMicroLabel {
+  background-color: darkred;
+}
+.MiniMicroInput:checked + .MiniMicroLabel:after {
+  content: "Mini";
+}
+.MiniMicroButton {
+  position: relative;
+  width: 25px;
+  height: 15px;
+  top:-3px;
+  left:-1px;
+  margin: auto;
+}
+/*--------------------------------------------------------*/
+.i5dg {
+  width: 52px;
+  margin-left:4px;
+}
+.i4dg {
+  width: 45px;
+  margin-left:5px;
+}
+.i2dg {
+  width: 30px;
+}
+.ttitle {
+  font-size: 11px;
+  left: 20px
+}
+#linechart_material {
+  width: 620px;
+  height: 400px;
+  background: #f1f8e9;
 }
