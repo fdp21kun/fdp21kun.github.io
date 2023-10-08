@@ -57,7 +57,7 @@ function sample( strike, cp, prem, buy){
   let y;
   let s = [];
   for (let p = lower; p <= upper; p += 125) {
-    y = offset;
+    y = offset * buy;
     if (cp == "P") {                      // put
       if ( p <= strike) {
         y += (strike - p) * buy;
