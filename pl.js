@@ -109,7 +109,7 @@ function drawChart() {
   data.addColumn('number', '価格');
   let str;
   for (let i = 0; i < numCP; i++) {
-    str = callPut[i] + String(strikePrice[i]) + ((volume[i] < 0) ? "売" : "買");
+    str = callPut[i] + String(strikePrice[i]) + "*" + String(volume[i]);
     data.addColumn('number', str);
   }
   data.addColumn('number', '合成');
